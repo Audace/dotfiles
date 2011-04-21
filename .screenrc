@@ -1,0 +1,18 @@
+#
+# ~/.screenrc
+#
+
+escape `~              # replace C-a with backtick
+defbce on              # enable background-color-erase
+defutf8 on             # enable UTF-8
+altscreen on           # enable alternate screen buffer
+defscrollback 1000     # 1000-line scrollback buffer
+startup_message off    # disable startup message
+
+msgwait 10             # display messages for 10 seconds
+silencewait 10         # alert window silence after 10 seconds
+sorendition "=b bw"    # set the message highlighting attributes
+activity "Activity in window [%n%f %t] ^G"
+
+hardstatus off         # disable terminal status line; use message line
+caption always "%?%F%{= wk}%:%{= kw}%? %-Lw%{= KW}%> %n+%f %t %<%{-}%+Lw"

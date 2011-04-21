@@ -3,7 +3,7 @@
 git submodule init
 git submodule update
 
-DOTFILES=".emacs.d .zshrc .gitconfig .gitignore .ackrc .tmux.conf .cmd-key-happy.lua"
+DOTFILES=".emacs.d .zshrc .dir_colors .gitconfig .gitignore .ackrc .tmux.conf .cmd-key-happy.lua .vimrc .screenrc"
 BACKUP="backups/`date +'%Y%m%d-%H%M%S'`"
 DOTFILES_DIR=$PWD
 
