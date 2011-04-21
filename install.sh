@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOTFILES=".zshrc .gitconfig .gitignore .ackrc .tmux.conf"
+DOTFILES=".zshrc .gitconfig .gitignore .ackrc .tmux.conf .cmd-key-happy.lua"
 BACKUP="backups/`date +'%Y%m%d-%H%M%S'`"
 DOTFILES_DIR=$PWD
 
