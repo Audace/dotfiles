@@ -1,3 +1,4 @@
+# =====
 # Lines configured by zsh-newuser-install
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
@@ -8,14 +9,37 @@ zstyle :compinstall filename '/home/ben/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
-# lines from Mark
+
+# =====
+# OS X lines from http://hocuspokus.net/2008/01/a-better-ls-for-mac-os-x/
+# MacPorts
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+
+if [ "$TERM" != "dumb" ]; then
+    export LS_OPTIONS='--color=auto'
+    eval `dircolors ~/.dir_colors`
+fi
+
+# Useful aliases
+alias ls='ls $LS_OPTIONS -hF'
+alias ll='ls $LS_OPTIONS -lhF'
+alias l='ls $LS_OPTIONS -lAhF'
+alias cd..="cd .."
+alias c="clear"
+alias e="exit"
+alias ssh="ssh -X"
+alias ..="cd .."
+alias rm='rm -i'
+
+
+# =====
+# Lines from Mark
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=50000
 export SAVEHIST=50000
-eval `dircolors -b`
 
 # correction
 setopt correctall
@@ -51,8 +75,3 @@ bindkey "\e[F" end-of-line
 
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
-
-# aliases
-alias ls='ls --color=auto -F'
-alias ll='ls -lh --color=auto -F'
-alias rm='rm -i'
