@@ -15,16 +15,15 @@ done
 # ls
 if [ $(uname) = 'Darwin' ]; then
   if __which gls; then
-    alias ls='gls -F --color'
+    alias ls='gls -aF --color'
   else
     echo_warn "On Darwin and 'gls' not found"
-    alias ls='ls -Gp'
+    alias ls='ls -aGp'
   fi
 else
-  alias ls='ls -F --color=auto'
+  alias ls='ls -aF --color=auto'
 fi
 
-alias ls='ls -a'
 alias ll='ls -alh'
 
 # List only directories and symbolic
