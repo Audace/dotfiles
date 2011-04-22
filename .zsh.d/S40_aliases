@@ -24,23 +24,23 @@ else
   alias ls='ls -F --color=auto'
 fi
 
-alias ll='ls -l'
-alias la='ls -a'
+alias ls='ls -a'
+alias ll='ls -alh'
 
 # List only directories and symbolic
 # links that point to directories
 alias lsd='ls -d *(-/DN)'
-alias lld='ls -ld *(-/DN)'
+alias lld='ls -ldh *(-/DN)'
 
 # List only file beginning with "."
 alias lsa='ls -d .*'
-alias lla='ls -ld .*'
+alias lla='ls -ldh .*'
 
 alias lsr='ls -d **/*(.)'
-alias llr='ls -ld **/*(.)'
+alias llr='ls -ldh **/*(.)'
 
 alias lsdr='ls -d **/*(/)'
-alias lldr='ls -ld **/*(/)'
+alias lldr='ls -ldh **/*(/)'
 
 # Standard stuff
 alias mv='nocorrect mv'       # no spelling correction on mv
