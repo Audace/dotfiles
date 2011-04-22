@@ -3,7 +3,7 @@
 git submodule init
 git submodule update
 
-DOTFILES=".emacs.d .zshrc .dir_colors .gitconfig .gitignore .ackrc .tmux.conf .cmd-key-happy.lua .vimrc .screenrc"
+DOTFILES=".emacs.d .zshrc .zsh.d .dir_colors .gitconfig .gitignore .ackrc .tmux.conf .cmd-key-happy.lua .vimrc .vim .screenrc"
 BACKUP="backups/`date +'%Y%m%d-%H%M%S'`"
 DOTFILES_DIR=$PWD
 
@@ -21,3 +21,6 @@ for FILE in $DOTFILES; do
     echo "installing $FILE"
     ln -s "$DOTFILES_DIR/$FILE" "$HOME/$FILE"
 done
+
+(cd $HOME/.vim && ./update)
+mkdir -p ~/.vimundo
