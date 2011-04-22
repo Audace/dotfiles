@@ -35,8 +35,28 @@ alias lld='ls -ldh *(-/DN)'
 alias lsa='ls -d .*'
 alias lla='ls -ldh .*'
 
-alias lsr='ls -d **/*(.)'
-alias llr='ls -ldh **/*(.)'
+# From #zsh IRC
+# [1:16pm] aguynamedben: I'm new to zsh, I have a globbing alias lsr='ls -d **/*(.)', how do I get it to ALSO recursively list the contents of hidden directories?  Right now it only seems to be listing the contest no non-hidden dirs
+# [1:16pm] Mikachu: (.D)
+# [1:17pm] aguynamedben: ahhh that makes sense, was looking at something similar
+# [1:17pm] aguynamedben: thanks, now just need to tell it not .git haha
+# [1:18pm] Mikachu: **/^.git(.D) maybe
+# [1:18pm] Mikachu: but that might still match things inside .git
+# [1:18pm] aguynamedben: okay, I'll read more of the docs too, thanks Mikachu
+# [1:19pm] Mikachu: maybe something like **/*~(*/)#.git/*(.D)
+# [1:20pm] aguynamedben: you, sir, are money
+# [1:20pm] aguynamedben: that seems to work
+# [1:20pm] aguynamedben: the first one still caught .git stuff
+# [1:20pm] Mikachu: right
+# [1:20pm] aguynamedben: now to understand how you came up with that so I can learn zsh better 
+# [1:21pm] Mikachu: heh
+# [1:22pm] Mikachu: actually maybe (^.git/)#*(.D) would work too
+# [1:23pm] aguynamedben: Mikachu: yeah that works too
+# [1:23pm] Mikachu: that may or may not follow more symlinks though
+# [1:23pm] aguynamedben: cool, thanks man this is so rad
+
+alias lsr='ls -d **/*~(*/)#.git/*(.D)'
+alias llr='ls -ldh **/*~(*/)#.git/*(.D)'
 
 alias lsdr='ls -d **/*(/)'
 alias lldr='ls -ldh **/*(/)'
