@@ -32,7 +32,9 @@ alias e="exit"
 alias ssh="ssh -X"
 alias ..="cd .."
 alias rm='rm -i'
-
+alias lf='find . -type f -print | xargs ls -alh | sort -k5,5rn | head -50'
+alias ve='virtualenv --no-site-packages .'
+alias activate='. bin/activate'
 
 # =====
 # Lines from Mark
