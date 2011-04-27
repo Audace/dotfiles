@@ -89,7 +89,7 @@ alias sudovim=sudo\ vim
 alias sudovi=sudovim
 alias suvi=sudovim
 
-alias dud='du -ksh ./* | sort -n'
+alias dud='du -ks ./* | sort -nr | less | head -50'
 
 autoload zmv
 # Easy "mass move" alias
