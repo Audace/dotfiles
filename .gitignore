@@ -4,3 +4,9 @@
 \#*#
 backups
 .vim/bundle
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
