@@ -16,6 +16,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory extendedglob nomatch notify
+setopt inc_append_history # share history between zsh shells
+setopt share_history # retrieve history file every time history is called
 unsetopt autocd beep
 bindkey -e
 bindkey ' ' magic-space    # also do history expansion on space
