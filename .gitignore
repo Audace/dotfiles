@@ -10,3 +10,8 @@ backups
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
+
+# Java
+.idea
+*.iml
+target
