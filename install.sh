@@ -3,11 +3,12 @@
 git submodule init
 git submodule update
 
-DOTFILES=".dir_colors .gitconfig .gitignore .ackrc .tmux.conf .cmd-key-happy.lua .screenrc"
+DOTFILES=".dir_colors .gitconfig .gitignore .ackrc .tmux.conf .screenrc .emacs.d/init.el .emacs.d/ben.el"
 BACKUP="backups/`date +'%Y%m%d-%H%M%S'`"
 DOTFILES_DIR=$PWD
 
 for FILE in $DOTFILES; do
+    echo "$HOME/$FILE"
     if [ -e "$HOME/$FILE" ]; then
         if [ -L "$HOME/$FILE" ]; then
             echo "Not backing up ~/$FILE, it is a symlink -> `readlink $HOME/$FILE`. Deleting symlink instead."
