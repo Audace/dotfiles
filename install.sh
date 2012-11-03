@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOTFILES=".dir_colors .gitconfig .gitignore .ackrc .tmux.conf .screenrc .emacs.d/init.el .emacs.d/ben.el"
+DOTFILES=".dir_colors .gitconfig .gitignore .ackrc .tmux.conf .screenrc .emacs.d/init.el .emacs.d/ben.el .zshrc"
 BACKUP="backups/`date +'%Y%m%d-%H%M%S'`"
 DOTFILES_DIR=$PWD
 
