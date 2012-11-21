@@ -34,3 +34,11 @@ plugins=(git brew github osx pip python ssh-agent virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# turn of autocorrect
+unsetopt correct_all
+
+if [ $(uname) = 'Darwin' ]; then
+  # OS X helper binary
+  export JAVA_HOME=`/usr/libexec/java_home`
+fi
