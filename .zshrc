@@ -41,4 +41,7 @@ unsetopt correct_all
 if [ $(uname) = 'Darwin' ]; then
   # OS X helper binary
   export JAVA_HOME=`/usr/libexec/java_home`
+  
+  # Brew executables path
+  export PATH=$PATH:/usr/local/sbin
 fi
