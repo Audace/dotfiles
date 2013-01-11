@@ -48,12 +48,12 @@
   ;; For this to work, your prompt needs to be set to export PS1='\h!\u:\w\$ '
   ;; For ZSH, use export PROMPT=$'%m!%n:%/$ '
  '(dirtrack-list (quote ("\\((.+)\\)?[a-z0-9]+.[a-z0-9]+:\\(.*\\)[$#] $" 2)))
-
+ '(ssh-directory-tracking-mode t)
+ 
  ;;'(explicit-bash-args (quote ("--noediting" "-i" "-l")))
  ;;'(ido-mode nil nil (ido))
  ;;'(iswitchb-mode t)
  ;;'(ns-command-modifier (quote meta))
- ;;'(ssh-directory-tracking-mode t)
  )
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
