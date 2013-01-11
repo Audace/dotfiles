@@ -45,3 +45,6 @@ if [ $(uname) = 'Darwin' ]; then
   # Brew executables path
   export PATH=$PATH:/usr/local/sbin
 fi
+
+# My Emacs config expects the prompt to be like this
+export PROMPT=$'%m!%n:%/$ '
