@@ -6,6 +6,10 @@
 (set-default-font "Inconsolata-14")
 
 
+;; Tell Tramp to use rsync instead of scpc
+(setq tramp-default-method "rsync")
+
+
 ;; Make connecting to servers easier
 (defvar ssh-connection-alist
   '())
@@ -48,6 +52,7 @@
   ;; For this to work, your prompt needs to be set to export PS1='\h!\u:\w\$ '
   ;; For ZSH, use export PROMPT=$'%m!%n:%/$ '
  '(dirtrack-list (quote ("\\((.+)\\)?[a-z0-9]+.[a-z0-9]+:\\(.*\\)[$#] $" 2)))
+
  '(ssh-directory-tracking-mode t)
  
  ;;'(explicit-bash-args (quote ("--noediting" "-i" "-l")))
