@@ -22,6 +22,8 @@
 ;; [4:44] Benjamin Standefer: ok
 ;; [4:44] Ian Eure: Yes.
 
+(require 'ssh)
+
 (eval-after-load 'ssh
   '(progn
      (add-hook 'ssh-mode-hook
