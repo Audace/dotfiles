@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew github osx pip python ssh-agent virtualenvwrapper)
+plugins=(git brew github osx pip python ssh-agent)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
@@ -43,4 +43,10 @@ unsetopt correct_all
 if [ $(uname) = 'Darwin' ]; then
   # OS X helper binary
   export JAVA_HOME=`/usr/libexec/java_home`
+  
+  # Brew executables path
+  export PATH=$PATH:/usr/local/sbin
 fi
+
+# My Emacs config expects the prompt to be like this
+export PROMPT=$'%m!%n:%/$ '
