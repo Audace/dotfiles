@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # turn of autocorrect
-unsetopt correct_all
+unsetopt correct
 
 if [ $(uname) = 'Darwin' ]; then
   # OS X helper binary
