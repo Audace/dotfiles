@@ -45,7 +45,7 @@ if [ $(uname) = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home`
   
   # Brew executables path
-  export PATH=$PATH:/usr/local/sbin
+  export PATH=/usr/local/bin:$PATH
 fi
 
 # My Emacs config expects the prompt to be like this
