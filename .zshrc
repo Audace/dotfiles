@@ -46,7 +46,21 @@ if [ $(uname) = 'Darwin' ]; then
   
   # Brew executables path
   export PATH=/usr/local/bin:$PATH
+
+  export ARCHFLAGS="-arch x86_64"
 fi
 
 # My Emacs config expects the prompt to be like this
 export PROMPT=$'%m!%n:%/$ '
+
+# Python
+
+# virtualenv should use Distribute instead of legacy setuptools
+export VIRTUALENV_DISTRIBUTE=true
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+syspip(){
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
