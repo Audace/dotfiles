@@ -38,14 +38,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # turn of autocorrect
-unsetopt correct_all
+unsetopt correct
 
 if [ $(uname) = 'Darwin' ]; then
   # OS X helper binary
   export JAVA_HOME=`/usr/libexec/java_home`
   
   # Brew executables path
-  export PATH=$PATH:/usr/local/sbin
+  export PATH=/usr/local/bin:$PATH
 fi
 
 # My Emacs config expects the prompt to be like this
