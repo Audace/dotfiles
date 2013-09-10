@@ -53,6 +53,8 @@ fi
 # My Emacs config expects the prompt to be like this
 export PROMPT=$'%m!%n:%/$ '
 
+export REPORTTIME=2
+
 # Python
 
 # virtualenv should use Distribute instead of legacy setuptools
