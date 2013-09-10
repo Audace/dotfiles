@@ -27,6 +27,7 @@
 [core]
     pager = less -FRSX
     editor = vim
+	excludesfile = /Users/ben/.gitignore
 [push]
     default = tracking
 [branch]
