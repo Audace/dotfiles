@@ -15,9 +15,12 @@ backups
 .idea
 *.iml
 target
-.Python
 
 # Eclipse
 .project
 .pydevproject
 .settings
+
+# Python
+.Python
+.ropeproject
