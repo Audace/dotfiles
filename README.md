@@ -65,3 +65,7 @@ GIS
   * [GeoNames](http://www.geonames.org/) - Free global datasets of points and [point-based US ZIP codes](http://download.geonames.org/export/zip/)
   * [Maponics](http://www.maponics.com/) - Best premium provider of neighborhoods and ZIP code polygons
   * [TIGER/Line](http://www.census.gov/geo/maps-data/data/tiger-line.html) - Official US data about school districts, counties, cities, states, ZIP codes, roads
+
+Things people have told me but I haven't tried yet
+--------------------------------------------------
+* [Anonymous Pro coding font](http://www.marksimonson.com/fonts/view/anonymous-pro) - from @turingmachine
