@@ -8,6 +8,7 @@ System Administration
 * [htop](http://hisham.hm/htop/) - Better than top
 * [Running MySQL on Amazon EC2 with EBS](http://aws.amazon.com/articles/1663) - Simple directions for how to create and mount a filesystem from a block device.
 * Ubuntu or Debian!
+* [Locust](http://docs.locust.io/en/latest/index.html) - Load testing with Python and a web GUI
 
 Python
 ------
