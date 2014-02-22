@@ -58,7 +58,7 @@ GIS
 * [MapBox](https://www.mapbox.com/) - Customizable maps for web or mobile
 * [QGIS](http://www.qgis.org/en/site/) - General GIS tool
 * [twofishes](https://github.com/foursquare/twofishes) - Foursquare's coarse geocoder based on GeoNames data
-* Data
+* GIS data sources
   * [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Downloading_data) - Free wiki map of the world, including lots of hyperlocal data
   * [Natural Earth](http://www.naturalearthdata.com/) - Global country and state/province polygons, also includes other vectors and rasters for the world
   * [tz_world](http://efele.net/maps/tz/world/) - Timezone polygons
