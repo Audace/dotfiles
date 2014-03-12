@@ -1,21 +1,26 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-DOTFILES=".dir_colors .gitconfig .gitignore .ackrc .tmux.conf .screenrc .zshrc .emacs.d/init.el .emacs.d/ben.el .ssh/rc"
+set -e
+
+DOTFILES=".dir_colors .gitconfig .gitignore .ackrc .tmux.conf .screenrc .zshrc .emacs.d/init.el .emacs.d/ben.el .ssh/rc bin/git-opendiff"
 BACKUP="backups/`date +'%Y%m%d-%H%M%S'`"
-DOTFILES_DIR=$PWD
 
 for FILE in $DOTFILES; do
-    echo "$HOME/$FILE"
-    if [ -e "$HOME/$FILE" ]; then
-        if [ -L "$HOME/$FILE" ]; then
-            echo "Not backing up ~/$FILE, it is a symlink -> `readlink $HOME/$FILE`. Deleting symlink instead."
-            rm "$HOME/$FILE"
-        else
-            echo "Backing up ~/$FILE"
-            mkdir -p $BACKUP
-            mv "$HOME/$FILE" "$BACKUP/$FILE"
-        fi
+    DEST_PATH="$HOME/$FILE"
+
+    # Create directory if it doesn't exist
+    DEST_DIR=`dirname $DEST_PATH`
+    if [ ! -d $DEST_DIR ] ; then
+        mkdir -p $DEST_DIR
     fi
-    echo "installing $FILE"
-    ln -s "$DOTFILES_DIR/$FILE" "$HOME/$FILE"
+
+    # Copy file if it doesn't exist
+    if [ -e $DEST_PATH ] || [ -L $DEST_PATH ]; then
+        echo "Backing up $DEST_PATH to $BACKUP/$FILE"
+        mkdir -p `dirname $BACKUP/$FILE`
+        mv $DEST_PATH $BACKUP/$FILE
+    fi
+
+    echo "Installing $DEST_PATH"
+    ln -s $HOME/dotfiles/$FILE $DEST_PATH
 done

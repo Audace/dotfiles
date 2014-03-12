@@ -47,6 +47,9 @@ if [ $(uname) = 'Darwin' ]; then
   # Brew executables path
   export PATH=/usr/local/bin:$PATH
 
+  # Custom executables in home directory
+  export PATH=~/bin:$PATH
+
   export ARCHFLAGS="-arch x86_64"
 fi
 
