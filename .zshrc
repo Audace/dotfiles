@@ -42,7 +42,7 @@ unsetopt correct_all
 
 if [ $(uname) = 'Darwin' ]; then
   # OS X helper binary
-  export JAVA_HOME=`/usr/libexec/java_home`
+  #export JAVA_HOME=`/usr/libexec/java_home`
   
   # Brew executables path
   export PATH=/usr/local/bin:$PATH
@@ -51,6 +51,13 @@ if [ $(uname) = 'Darwin' ]; then
   export PATH=~/bin:$PATH
 
   export ARCHFLAGS="-arch x86_64"
+
+  # rbenv
+  if which rbenv > /dev/null; then
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+  fi
+
 fi
 
 # My Emacs config expects the prompt to be like this
@@ -69,3 +76,6 @@ syspip(){
 }
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

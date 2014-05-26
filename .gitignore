@@ -6,10 +6,15 @@ backups
 .vim/bundle
 
 # Emacs
-*~
+# https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
 
 # Java
 .idea
@@ -24,3 +29,8 @@ target
 # Python
 .Python
 .ropeproject
+
+# Ruby
+.ruby-version
+.env
+.powenv
