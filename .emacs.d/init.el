@@ -16,8 +16,8 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
- (add-to-list 'load-path "/Users/ben/elpy/")
-(load-file "/Users/ben/elpy/elpy.el")
+ (add-to-list 'load-path "/Users/williamfry/elpy/")
+(load-file "/Users/williamfry/elpy/elpy.el")
 (elpy-enable)
 (elpy-use-ipython)
 (custom-set-variables

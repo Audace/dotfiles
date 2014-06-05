@@ -1,6 +1,6 @@
 [user]
-    name = Ben Standefer
-    email = benstandefer@gmail.com
+    name = William Fry
+    email = will.fry@suddenlink.net
 [alias]
     a = add
     br = branch
@@ -27,7 +27,7 @@
 [core]
     pager = less -FRSX
     editor = vim
-	excludesfile = /Users/ben/.gitignore
+	excludesfile = /Users/williamfry/.gitignore
 [push]
     default = tracking
 [branch]
